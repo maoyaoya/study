@@ -13,8 +13,8 @@
 [某视频教学网站](http://maoyaoya.github.io/study/html+css/xuecheng)<br>
 [知乎登录页面](http://maoyaoya.github.io/study/html+css/zhihu)<br>
 ###### js部分
- promise中包括promise应用场景，以及then()、all()、race()方法
- dom目录下是一些深入学习的demo
+ promise中包括promise应用场景，以及then()、all()、race()方法<br>
+ dom目录下是一些深入学习的demo<br>
  [仿新浪博客，实现了大部分的动态效果](http://maoyaoya.github.io/study/js/sina)<br>
  [贪吃蛇游戏](http://maoyaoya.github.io/study/js/sina)<br>
  [电商网站放大镜效果](http://maoyaoya.github.io/study/js/放大镜)<br>
