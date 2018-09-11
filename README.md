@@ -2,4 +2,5 @@
 ###### html+css部分
 [仿的某程序员网做的页面效果](http://maoyaoya.github.io/study/html+css/black)<br>
 [一些css动画效果，开门见楚乔](http://maoyaoya.github.io/study/html+css/css8)<br>
+[一些css动画效果，](http://maoyaoya.github.io/study/html+css/css2)<br>
 [vue效果,没有太多的动画的效果](http://maoyaoya.github.io/study/vue)
