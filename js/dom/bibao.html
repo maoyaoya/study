@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动</title>
+</head>
+
+<body>
+    <script>
+        /*
+        function box() {
+            var arr = [];
+
+            for (var i = 0; i < 5; i++) {
+                arr[i] = (function (num) {
+                    return num;
+                })(i)
+            }
+            return arr;
+        }
+        var b = box();
+        //var c = b()[0];
+        for (var i = 0; i < 5; i++) {
+            console.log(b[i]);//0,1,2,3,4
+
+            两种方法修改闭包中的作用域
+            1.对象冒充
+            var user = 'window';
+        var box = {
+            user: 'box',
+            //getUser: function () {
+            // return this.user;
+            // },
+            getUser: function () {
+                return function () {
+                    return this.user;
+                }
+            }
+        };
+        //console.log(box.getUser());//box
+        console.log(box.getUser()());//window 闭包中的this指向window
+        //对象冒充
+        console.log(box.getUser().call(box));//box
+        2.把this赋给返回
+var user = 'window';
+        var box = {
+            user: 'box',
+            //getUser: function () {
+            // return this.user;
+            // },
+            getUser: function () {
+                var _this = this;
+                return function () {
+                    return _this.user;
+                }
+            }
+        };
+        //console.log(box.getUser());//box
+        console.log(box.getUser()());//box this指向box
+        //对象冒充
+        console.log(box.getUser().call(box));//box
+
+        }
+
+
+
+        //使用自我执行的函数，使js有块级作用域，js本身没有
+        //使用全局作用域，多人开发时，或代码很长,会有很多问题
+        function box() {
+            //(function () {
+            //    for (var i = 0; i < 5; i++) { }
+            //})();
+            //console.log(i);//i is not defined
+            for (var i = 0; i < 5; i++) { }
+            console.log(i)    //5,因为没有块级作用域
+        }
+        box();
+
+三、属性私有
+
+        function box() {
+            this.age = 100;    //公有属性
+            this.run = function () {   //公有方法
+                return '运行中...';
+            }
+        }
+        var b = new box();
+        console.log(b.age);  //100   
+        console.log(b.run());   //运行中...
+
+2.        function box() {
+            var age = 100;    //私有属性
+            function run() {   //私有函数
+                return '运行中...';
+            }
+            this.publicGo = function () {  //对外公共的特权方法
+                return age + run();
+            }
+        }
+        var b = new box();
+        //console.log(b.age);     //undefined
+        //console.log(b.run());   //b.run is not a function
+        console.log(b.publicGo());  //100运行中...
+3.通过构造函数传参
+function box(value) {
+            var user = value;
+            this.get = function () {
+                return user;
+            }
+        }
+        var box = new box('xf');
+        console.log(box.get());
+
+4.通过原型实现共享
+//在匿名函数中声明构造函数，需要用Box=function（）{}，使它变为全局
+ (function () {
+            var user = '';
+            Box = function (value) {
+                user = value;
+            }
+            Box.prototype.get = function () {
+                return user;
+            }
+            Box.prototype.set = function (value) {
+                user = value;
+            }
+
+        })();
+        var box = new Box('kkk');
+        console.log(box.get());//kkk
+        var box1 = new Box('aaa');
+        console.log(box.get());//aaa
+        var box2 = new Box('bbb');
+        console.log(box.get());//bbb
+        box.set('ccc');
+        console.log(box2.get());//ccc 
+        
+//什么叫单例，就是永远只实例化一次，其实就是字面量对象声明方式
+var box={};
+
+       */
+
+
+
+    </script>
+</body>
+
+</html>

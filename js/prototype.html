@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>原型链案例</title>
+  <script>
+    window.onload = function () {
+      function Ele(id) {
+        this.ele = document.getElementById(id);
+      }
+      Ele.prototype.html = function (val) {
+        var ele = this.ele;
+        if (val) {
+          ele.innerHTML = val;
+          return this;             //使可以进行链式操作
+        } else {
+          return ele.innerHTML;
+        }
+      }
+      Ele.prototype.on = function (type, fn) {
+        var ele = this.ele;
+        ele.addEventListener(type, fn);
+        return this;
+      }
+
+      var f = new Ele('div1');
+      f.on('click', function () {
+        alert('hello');
+      })
+    }
+
+  </script>
+</head>
+
+<body>
+  <div id="div1">测试用</div>
+</body>
+
+</html>

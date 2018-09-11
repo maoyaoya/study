@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let promise = new Promise(function (resolve, reject) {
+    //   console.log('promise');
+    //   resolve();
+    // });
+    // promise.then(function () {
+    //   console.log('resolve')
+    // })
+    // console.log('hi')
+    // console.log(Promise)
+
+    // function run() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       console.log('执行完成');
+    //       resolve('ok');
+    //     }, 2000);
+    //   })
+    //   return p;
+    // }
+
+    // function run1() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       console.log('执行完成');
+    //       resolve('ok1');
+    //     }, 2000);
+    //   })
+    //   return p;
+    // }
+
+    // function run2() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       console.log('执行完成');
+    //       resolve('ok2');
+    //     }, 2000);
+    //   })
+    //   return p;
+    // }
+    // //run()    //执行完成
+    // run().then(function (data) {
+    //   console.log(data);
+    //   return run1();
+    // }).then(function (data) {
+    //   console.log(data);
+    //   return '好呀'
+    // }).then(function (data) {
+    //   console.log(data);
+    // })
+
+    // function getNumber() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       var num = Math.ceil(Math.random() * 10);
+    //       if (num < 5) {
+    //         resolve(num);
+    //       } else {
+    //         reject('数字太大' + num);
+    //       }
+    //     }, 2000)
+    //   })
+    //   return p;
+    // }
+
+    // getNumber().then(
+    //   function (data) {
+    //     console.log('resolved');
+    //     console.log(data);
+    //   },
+    //   function (reason, data) {
+    //     console.log('rejected');
+    //     console.log(reason);
+    //   }
+    // )
+
+    // getNumber().then(
+    //   function (data) {
+    //     console.log('resolved');
+    //     console.log(data);
+    //     console.log(some);
+    //   })
+    //   .catch(function (reason, data) {   //catch和then执行起来没什么差别，但是当上面代码有错误的时候，不会卡住，依旧会执行
+    //     console.log('rejected');
+    //     console.log(reason);
+    //   })
+
+
+
+    //  Promise的all用法
+    // function run() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       console.log('执行完成');
+    //       resolve('ok');
+    //     }, 1000);
+    //   })
+    //   return p;
+    // }
+
+    // function run1() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       console.log('执行完成');
+    //       resolve('ok1');
+    //     }, 2000);
+    //   })
+    //   return p;
+    // }
+
+    // function run2() {
+    //   var p = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       console.log('执行完成');
+    //       resolve('ok2');
+    //     }, 2000);
+    //   })
+    //   return p;
+    // }
+    // Promise.all([run(), run1(), run2()])   //all是让异步操作并行执行，谁慢以谁为准
+    //   .then(function (results) {           //返回的参数保存在results中
+    //     console.log(results);
+    //   })
+
+
+    // Promise.race([run(), run1(), run2()])   //race是谁快谁先执行
+    //   .then(function (results) {
+    //     console.log(results);
+    //   })
+
+
+    // race的应用
+    function requestImg() {
+      var p = new Promise(function (resolve, reject) {
+        var img = new Image();
+        img.onload = function () {
+          resolve(img);
+        }
+        img.src = 'xxxx'
+      })
+    }
+
+    function timeout() {
+      var p = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          reject('图片请求超时')
+        }, 5000);
+      })
+      return p;
+    }
+    Promise.race([requestImg(), timeout()]).then(function (results) {
+      console.log(results);
+    }).catch(function (reason) {
+      console.log(reason);
+    })
+  </script>
+</body>
+
+</html>

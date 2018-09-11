@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动</title>
+    <script src="./script/domready.js"></script>
+</head>
+
+<body>
+    <div id="show">这里是h1</div>
+    <div>
+        <img src="./images/1.jpg">
+        <img src="./images/2.jpg">
+        <img src="./images/3.jpg">
+        <img src="./images/4.jpg">
+        <img src="./images/5.jpg">
+        <img src="./images/6.jpg">
+    </div>
+    <script>
+        var d = document;
+        var show = d.getElementById('show');
+        var timer1 = 0, timer2 = 0;
+        myReady(function () {
+            show.innerHTML += "dom已经加载<br>";
+            timer1 = new Date().getTime();
+            show.innerHTML += "时间是：" + timer1 + '<br>';
+        })
+        window.onload = function () {
+            show.innerHTML += "dom已经加载<br>";
+            timer2 = new Date().getTime();
+            show.innerHTML += "时间是：" + timer2 + '<br>';
+            show.innerHTML += "时间差为：" + (timer2 - timer1) + "ms";
+        }
+    </script>
+</body>
+
+</html>

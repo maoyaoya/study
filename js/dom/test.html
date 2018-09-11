@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        //01
+        /*var res = (123 + 45 * 78) / (34 + 543) - 9 * (324 - 34);
+        alert(res);
+        var num = prompt("请输入一个三位数");
+        var ge = num % 10;
+        var shi = Math.floor(num / 10) % 10;
+        var bai = Math.floor(num / 100);
+        var res = ge + shi + bai;
+        alert(res);
+
+        var a = 1;
+        var b;
+        alert(typeof (a + b));
+
+        var num1 = "abc";
+        var num2 = 1;
+
+        var res = num1 - num2;
+        alert(res); //res NaN
+        alert(typeof res);
+        
+        var score1 = 55;
+
+        console.log("去办公室找利群");
+
+        //在原来的值的基础上再加10分，然后交给小苍的分数去保存
+        //score1 = score1 + 10;
+
+        score1 += 10; //这就代表在它原来的值的基础上+10
+
+        console.log("找了利群后，分数为：" + score1);
+        
+        
+        var num1 = 18;
+        if (num1 >= 18) {
+            var num2 = 10;
+            var res = num2 + 5; //res = 15
+            res++; //16
+            res += 2; //18
+            alert("哈哈");
+            alert(res);
+            if (res >= 20) {
+                alert("嘿嘿嘿");
+            }
+        }
+        var money = prompt('请输入土豪儿子的成绩');
+
+        switch (Math.floor(money / 10)) {
+            case 10:
+            case 9:
+                alert('土豪爸爸给买保时捷');
+                break;
+            case 8:
+                alert('买宝马');
+                break;
+            case 7:
+                alert('买大黄蜂');
+                break;
+            case 6:
+                alert('买拖拉机');
+                alert("断绝父子关系");
+                break;
+            default:
+                alert("你这是什么分数，想糊弄老子ma?");
+                break;
+        }
+        
+        // var a = 1; var b; alert(typeof (b));
+        //var a = "1"; var b = +a; alert(typeof (b));
+        //var a = 1; var b = 1 + "1"; alert(typeof (b));
+        var a = "a"; alert(typeof (+a));
+        var a = "a"; alert(typeof (!a));
+        var a = "a"; alert(typeof (a + ""));	
+
+        var a = 12;
+        var b = 10;
+        var c = 5;
+        var d = a++;  //d=12,a=13
+        var e = ++b;  //e=b=11
+        var f = c + d++;  //f=17,d=13
+        var g = c + ++d;  //g=19,d=14
+        alert(d);
+        alert(e);
+        alert(f);
+        alert(g);
+
+        var number = +prompt('请输入鸡蛋的数量');
+        var box = Math.ceil(number / 20);
+        alert('需要盒子：' + box + '个');
+
+        var number = +prompt('请输入人数');
+        var column = Math.floor(number / 10);
+        var left = number % 10;
+        alert(column + '<br/>' + left);
+
+
+        var a = Math.ceil(Math.random() * 100);
+        var b = Math.ceil(Math.random() * 100);
+        var c = Math.ceil(Math.random() * 100);
+        var d = Math.max(a, b, c);
+        var e = Math.min(a, b, c);
+        alert(a);
+        alert(b);
+        alert(c);
+        alert(d);
+        alert(e);
+
+//   var num = 10;
+        //console.log(num.toString());
+
+        //var res = true;
+        //console.log(res.toString());
+        var num = NaN;
+        console.log(num.toString());
+
+         var money = +prompt("小群群，你有多少钱？");
+
+        if (money >= 500) {
+
+            alert("来，跪下，按脚！");
+
+        } else if (money >= 400) {
+
+            alert("请我吃海底捞");
+
+        } else if (money >= 300) {
+
+            alert("请我吃你们店对面烧烤店的烧烤");
+
+        } else if (money >= 200) {
+
+            alert("抽利群");
+
+        } else {
+            //肯定是200块以下
+            alert("脱裤子，打屁屁");
+
+
+var age = +prompt('请输入年龄');
+        if (age >= 18) {
+            alert('请你慢慢看');
+        } else if (age > 14 && age < 18) {
+            var res = confirm('是否要继续观看！');
+            if (res) {
+                alert('看吧看吧，后果自付');
+            } else {
+                alert('不给你看');
+            }
+        } else {
+            alert('回家找妈妈')
+        }
+        }
+        
+        var year = +prompt('请输入年份：');
+        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            alert(year + '是闰年');
+        } else
+            alert(year + '是平年');
+
+var year = +prompt('请输入年份：');
+        var month = +prompt('请输入月份：');
+        switch (month) {
+            case 1:
+            case 5:
+            case 3:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert(year + '年' + month + '月有31天');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert(year + '年' + month + '月有30天');
+                break;
+            case 2:
+                if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+                    alert(year + '年' + month + '月有29天');
+                } else {
+                    alert(year + '年' + month + '月有28天');
+                }
+                break;
+        }
+var a = +prompt('请输入第一个数：');
+        var b = +prompt('请输入第二个数：');
+        var c = +prompt('请输入第三个数：');
+        var max;
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+        //max=a>b?a:b
+        if (max > c) {
+            alert('最大数为' + max);
+        } else {
+            alert('最大数为' + c);
+
+
+var str = "123"; //他是字符串  他是NaN
+        var res = isNaN(str);  //isNaN在判断的时候，会有一个隐式转换。 
+        alert(res);//false
+        }
+
+        var num = prompt("");
+        var num = true;
+        var res = Number(num);
+        alert(res);//1
+
+        for (var i = 0; i < 10; i += 2) {  // 0 2 4 6  8
+            console.log("建林说：几十个亿不能说是小意思吧，这样说感觉有点狂，那就中等意思吧");
+        }
+
+        for (alert("呵呵"); alert("哈哈"); alert("嘻嘻")) {
+            alert("嘿嘿");
+        }  //呵呵 哈哈
+
+        var number = +prompt('请输入学生人数');
+        var sum = 0;
+        for (var i = 0; i < number; i++) {
+            var score = +prompt('输入第i+1个学生的成绩：');
+            sum += score;
+        }
+        console.log(sum);
+
+var num;
+        var max = -Infinity;
+        for (i = 1; i <= 5; i++) {
+            num = prompt('输入第' + i + '个值');
+            if (num > max) {
+                max = num;
+            }
+        }
+        console.log(max);
+
+var i = 0;
+        while (i < 5) {
+            i++;
+            if (i == 3) {
+                continue;
+            }
+            console.log("林哥，你好帅!" + i);
+
+        }
+       
+            var count = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                count++;
+            }
+        }
+        alert(count);
+            for (var i = 0; i < 5; i++) {
+            console.log("外层循环开始" + i);
+            for (var j = 0; j < 3; j++) {
+                console.log("里开始" + j);
+                if (j == 2) {
+                    break;
+                }
+                console.log("里结束" + j);
+            }
+            if (i == 2) {
+                break;
+            }
+            console.log("外层循环结束" + i);
+        }
+
+     for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                document.write(j + '*' + i + " = " + i * j + ' ');
+            }
+            document.write('<br />');
+
+
+            for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                document.write('*');
+            }
+            document.write('<br />');
+        }
+        }
+
+for (var i = 1; i <= 5; i++) {
+            for (var j = 0; j < i; j++) {
+                document.write('*');
+            }
+            document.write('<br />');
+        }
+
+var arr = [5, 8, 4, 3, 6, 9, 11];
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = arr.length - 1; j >= 0; j--) {
+                //arr[j] arr[j+1]
+                if (arr[j] < arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr)
+
+
+ var UserName;
+        var password;
+        while (true) {
+            UserName = prompt('请输入用户名');
+            password = prompt('请输入密码');
+            if (UserName == 'admin' && password == '8888888') {
+                alert('登陆成功');
+                break;
+            }
+            alert('密码错误，重新登录');
+        }
+
+var i = 1;
+        while (i <= 100) {
+            if (i % 7 == 0) {
+                i++;
+                continue;
+            }
+            console.log(i);
+            i++;
+        }
+
+var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+            if (sum >= 20) {
+                console.log(i);
+                console.log(sum);
+                break;
+            }
+        }
+
+
+var i = 1;
+        do {
+            var sum = 8 * Math.pow(1.25, i);
+            i++;
+        } while (sum < 20)
+        console.log(2006 + i - 1);
+
+var i = 1;
+        var sum = 0;
+        while (sum < 20) {
+            sum = 8 * Math.pow(1.25, i);
+            i++;
+        }
+        console.log(2006 + i - 1);
+
+        for (var i = 1000; i <= 5000; i++) {
+            var ge = i % 10;
+            var shi = parseInt(i / 10) % 10;
+            var bai = parseInt(i / 100) % 10;
+            var qian = parseInt(i / 1000);
+            if (ge + shi + bai + qian == 5) {
+                console.log(i);
+            }
+        }
+
+var sum = 0;
+        var res = 56;
+        do {
+            var number = +prompt('猜猜看');
+            if (number > res) {
+                alert('猜大了');
+            } else if (number < res) {
+                alert('猜小了');
+            }
+            sum++;
+        } while (number != res)
+
+        console.log('你猜了 ' + sum + '次');
+
+        for (var i = 100; i <= 999; i++) {
+            var a = i % 10;
+            var b = parseInt(i / 10) % 10;
+            var c = parseInt(i / 100);
+            if (Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3) == i) {
+                console.log(i);
+            }
+        }
+
+        var i = 2;
+        while (true) {
+            if (i % 3 == 1 && i % 4 == 1 && i % 5 == 1) {
+                console.log(i);
+                break;
+            }
+            i++
+        }
+
+        var arr = [1, 2, 3, 4, 5, 6];
+        for (var i = 0; i < arr.length / 2; i++) {
+            var temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        console.log(arr);
+
+        var arr = [1, 2, 3, 4, 5, 6];
+        var arr1 = [];
+        for (i = arr.length - 1; i >= 0; i--) {
+            arr1[arr1.length] = arr[i];
+        }
+        console.log(arr1);
+
+var arr = [1, 1];
+        for (var i = 2; i < 8; i++) {
+            arr[i] = arr[i - 1] + arr[i - 2];
+        }
+        console.log(arr);
+
+var head = ["编号", "姓名", "年龄", "性别", "成绩"];
+        var datas = ["1", "华姐", 18, "男", 100];
+        document.write("<table calss='one'>");
+        document.write('<table><tr>')
+        for (var i = 0; i < head.length; i++) {
+            document.write("<th>");
+            document.write(head[i]);
+            document.write("</th>");
+        }
+        document.write("</tr></thead>");
+        document.write("<tbody><tr>");
+        for (var i = 0; i < datas.length; i++) {
+            document.write("<td>");
+            document.write(datas[i]);
+            document.write("</td>");
+        }
+        document.write("</tr></tbody>");
+
+        document.write("</table>");
+
+ var arr = [10, 4, 200, -6, 88, -10];
+
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                //arr[i]  arr[j]
+                if (arr[i] < arr[j]) {
+                    var temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        console.log(arr);
+        
+var arr = [6, 5, 4, 2, 3, 1];
+        //声明一个变量，记录比较的轮数
+        var count = 0;
+
+
+        for (var i = 0; i < arr.length - 1; i++) {  //外层循环控制的是轮数
+
+            //先声明一个变量flag = true。
+            var flag = true;
+
+            for (var j = 0; j < arr.length - 1 - i; j++) {
+                //arr[j] arr[j+1]
+                if (arr[j] < arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    //如果发生了交换，就把flag的值改成flase。
+                    flag = false;
+                }
+            }
+
+            //如果经过上面的for循环，发现一次交换都没有，说明到这里数组已经排好序了，剩下的轮数根本就不用继续。
+            //如果到了这里，之前声明的flag的值还是原来的true，说明上面的for里面一次交换都没有。
+            //一次交换都没有，说明已经排好序了，剩下的轮数就可以不用做了。
+            if (flag) {
+                break;
+            }
+
+            count++;
+        }
+
+        console.log(arr);
+        console.log(count);
+        
+        
+        var arr = [6, 5, 4, 2, 3, 1];
+        var sum = '';
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i] + '|';
+        }
+        console.log(sum);
+        console.log(123);
+        
+        function nine() {
+            document.write("<table>");
+            for (var i = 1; i <= 9; i++) {
+                document.write("<tr>");
+                for (var j = 1; j <= i; j++) {
+                    document.write("<td>");
+                    document.write(j + '*' + i + " = " + i * j);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+        nine();
+        
+        function getSum(n1, n2) {//形参，相当于写了一个var n1,n2;
+
+            console.log(n1 + " + " + n2 + " 和为：" + (n1 + n2));
+
+        }
+
+        getSum(10, 20);//实参
+
+        getSum();//undefined + undefined 和为：NaN
+
+function sum(num1, num2) {
+            var su = 0;
+            var min = num1 < num2 ? num1 : num2;
+            var max = num1 < num2 ? num2 : num1;
+            for (var i = min; i <= max; i++) {
+                su += i;
+            }
+            return su;
+        }
+        console.log(sum(10, 3));
+        
+        function my(a) {
+            console.log(a);
+        }
+        var res = my('a');
+        console.log(res);
+        
+        
+        function getSum(num1, num2) {
+            return num1 + num2;
+        }
+
+        function getSub(num1, num2) {
+            return num1 - num2;
+        }
+
+
+
+
+        function chuLi(n1, n2, func) {
+            var res
+            var res1 = n1 * 10;
+            var res2 = n2 + 10;
+            if (Object.prototype.toString.call(func) == "[object Function]") {
+                res = func(res1, res2);
+            }
+            return res
+        }
+
+
+        console.log(chuLi(10, 20, getSum));
+
+        console.log(chuLi(10, 20, getSub));
+
+
+var date = new Date();
+        console.log(date.getMonth());
+
+       function time(date) {
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var hour = date.getHours();
+            var min = date.getMinutes();
+            var second = date.getSeconds();
+            var res = year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + second;
+            return res;
+        }
+        var date = new Date();
+        console.log(time(date)); 
+
+       var str = 'get-element-by-id';
+        var arr = str.split('-');
+        for (i = 1; i < arr.length; i++) {
+            var low = arr[i].charAt(0);
+            var up = arr[i].charAt(0).toLocaleUpperCase();
+            arr[i] = arr[i].replace(low, up);
+        }
+        str = arr.join("");
+        console.log(str); 
+
+        function stringReapt(str, n) {
+            return new Array(n + 1).join(str);
+        }
+        var str = stringReapt('a', 3);  //aaa
+        console.log(str);
+
+        function c() {
+            this.a = 2;
+            return { a: 3 };
+        }
+        var o = new c();
+        console.log(o.a); //3 返回的是对象
+
+        function f() {
+            return this.a;
+        }
+        var g = f.bind({ a: 'test' });
+        console.log(g());//test
+
+        var o = { a: 37, f: f, g: g };
+        console.log(o.f() + o.g());//37test
+
+        function foo(x, y) {
+            console.log(x, y, this);
+        }
+        foo.call(100, 1, 2);//1,2,Number(100)
+
+        function func() {
+            this.b = 100;
+            this.a = 50;
+            return this.a;
+        }
+        //var func = foo.bind({ a: 1 });
+        var a = new func();
+        console.log(a);
+        */
+        for (var i = 1; i <= 2; i++) {
+            (function (i) {
+                //document.getElementById('div' + i);
+                addEventListener('click', function () {
+                    alert(i);
+                });
+            })(i);
+
+        }
+    </script>
+    <div id='div1'>aaa</div>
+    <div id="div2">bbb</div>
+</head>
+
+<body>
+
+</body>
+
+</html>

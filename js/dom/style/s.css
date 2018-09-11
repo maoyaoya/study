@@ -1,0 +1,14 @@
+.container{
+  height:477px;
+  margin:0 auto;
+  position: relative;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  overflow:hidden;
+}
+.container img{
+  position: absolute;
+  left:0;
+  display:block;
+  border-left:1px solid #ccc;
+}

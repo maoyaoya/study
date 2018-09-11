@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动</title>
+</head>
+
+<body>
+    <!--nodename,nodeValue-->
+    <div class="container">
+        这是一个元素节点
+    </div>
+    <script>
+        var divNode = document.getElementsByClassName('container')[0];
+        console.log(divNode.nodeName + '/' + divNode.nodeValue);
+        //获取属性节点
+        var attrNode = divNode.attributes[0];
+        console.log(attrNode.nodeName + '/' + attrNode.nodeValue);
+        //获取文本节点
+        var textNode = divNode.childNodes[0];
+        console.log(textNode.nodeName + '/' + textNode.nodeValue);
+        //获取注释节点，下标为1，因为0为空白节点
+        var commentNode = document.body.childNodes[1];
+        console.log(commentNode.nodeName + '/' + commentNode.nodeValue);
+        //doctype节点
+        console.log(document.doctype.nodeName + '/' + document.doctype.nodeValue);
+        //获取文档片段节点
+        var frag = document.createDocumentFragment();
+        console.log(frag.nodeName + '/' + frag.nodeValue);
+    </script>
+</body>
+
+</html>

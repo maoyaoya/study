@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>css</title>
+  <style>
+    /* body {
+      background-image: url(images/king.jpg);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      background: url(images/king.jpg) no-repeat top center;
+      background-attachment: fixed;
+     
+    }  */
+
+    /* 背景缩放  background-size */
+
+    /* div {
+      width: 200px;
+      height: 400px;
+      background-color: red;
+      background-image: url(images/l.jpg);
+      background-repeat: no-repeat;
+       background-size: 100px 100px; 
+       background-size: contain; 保持图片比例 
+       background-size: cover;  铺满整个容器 
+    } */
+    div {
+      background: #ccc;
+      width: 600px;
+      height: 300px;
+      color: #ccc;
+      font-size: 40px;
+    }
+
+    div:first-child {
+      text-shadow: 2px 2px 2px #000, -2px -2px 2px #fff;
+    }
+
+    div:last-child {
+      text-shadow: -2px -2px 2px #000, 2px 2px 2px #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 选项列表，必须要和input框一起使用，且要用list和id把它们关联起来
+  <input type="text" list="star">
+  <datalist id="star">
+    <option>李丽丽</option>
+    <option>陈冠希</option>
+    <option>马爸爸</option>
+  </datalist> -->
+
+  <!-- 分组标签，自带框框
+  <fieldset>
+    <legend>学生档案</legend>
+    姓名：<input type="text" name=""> 性别：
+    <input type="text" name="">
+  </fieldset> -->
+
+  <!-- input框的新属性
+  <form>
+    邮箱：<input type="email"><br> 号码：
+    <input type="tel"><br> 博客：
+    <input type="url"><br> 年龄：
+    <input type="number"><br> 搜索：
+    <input type="search"><br>
+    <input type="range"><br> 时间：
+    <input type="time"><br> 日期：
+    <input type="date"><br>
+    <input type="datetime"><br> 月份：
+    <input type="month"><br> 周：
+    <input type="week"><br> 自动获得焦点
+    <input ttype="text" autofocus><br> 多文件上传：
+    <input type="file" multiple><br> 自动保存(首先必须要有一个提交按钮，还需要有一个名字)：
+    <input type="text" autocomplete="on" name="auto"><input type="submit"> 必填：
+    <input type="text" required>
+  </form> -->
+
+  <div>凸起</div>
+  <div>凹下去</div>
+</body>
+
+</html>

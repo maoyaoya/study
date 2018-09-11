@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑动</title>
+</head>
+
+<body>
+    <div id="show">这里是1</div>
+    <!--这是注释-->
+    <script>
+        var show = document.getElementById('show');
+        var a = {
+            nodeType: 1,
+        };
+        var isElement = function (obj) {
+            if (obj && obj.nodeType === 1) {
+                if (window.Node && obj instanceof Node) {
+                    return true
+                }
+                try {
+                    show.appendChild(obj);
+                    show.removeChild(obj);
+                } catch{
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        }
+        console.log(isElement(show));
+        console.log(isElement(show.nextSibling));
+        console.log(isElement(a));
+    </script>
+</body>
+
+</html>

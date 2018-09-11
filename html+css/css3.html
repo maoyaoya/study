@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>3</title>
+  <style>
+    /* 目标伪类选择器，要配合a标签使用
+    :target {
+      background-color: red;
+    } */
+
+    /* 属性选择器
+    li[type] {
+      color: red;
+    }
+    属性名
+
+    li[type="box1"] {
+      color: blue;
+    }
+    利用属性值，写了第三个以后，type里的内容就改变了，所以这行代码就不生效了
+    所以颜色会变为红色，要想颜色变为蓝色，type="box1 one"即可
+
+    li[type~="one"] {
+      font-size: 40px;
+    }
+    控制拥有多个属性，并且用空格隔开 */
+
+    /* 伪元素选择器 p::first-letter {
+      color: red;
+      font-size: 40px;
+    }
+
+    第一个字的样式 p::first-line {
+      color: green;
+    }
+
+    第一行的样式，会随着浏览器的大小改变 p::selection {
+      color: yellow;
+    }
+
+    选中文本的样式 div::before {
+      content: "你好";
+    }
+
+    可以修改div中的内容，before在前，after在后 div::after {
+      content: "是啊";
+    } */
+
+    /* 块级元素的特点：
+     1. 块级元素每行只显示一个，可以设置宽高 
+     */
+
+    /* 最常见的行内元素span
+     1.一行允许有多个，不能设置有效的宽高，内容决定宽高
+     2.垂直方向上的margin和padding是没有效果的
+      */
+
+    /* 行内块元素input、img
+      1.一行可以显示多个，可以设置宽高
+     */
+
+    /* 紫色三角形，transparent是透明
+    div {
+      width: 0px;
+      height: 0px;
+      border-width: 60px;
+      border-style: dashed;
+      border-color: transparent transparent transparent purple;
+    } */
+
+    /* margin只能实现水平居中 ，使用margin可能会遇到很多未知的问题
+     margin:0 auto;要实现居中，盒子本身要是块级元素，而且必须是设置了宽度，是为块元素准备的
+     行内块用margin:0 auto;是没有作用的
+    */
+
+    /* 垂直塌陷问题：两个垂直排布的盒子，加上相对应的margin时，只显示最大的。
+    .one {
+      width: 100px;
+      height: 100px;
+      background-color: blueviolet;
+      margin-bottom: 100px;
+    }
+
+    .two {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      margin-top: 100px;
+    } */
+
+    /* 包含塌陷问题：子元素的margin-top会对父元素产生影响 ，解决方法，可以给父元素加上
+   overflow:hidden;就可以正常显示了
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .father {
+      width: 500px;
+      height: 500px;
+      background: red;
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      margin-top: 100px;
+    } */
+
+    /* margin共享问题，当把div变为行内块，改变一个元素的margin-top， 三个元素都会改变，但其实只有第一个元素有margin
+     * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+    }
+
+    .left {
+      background-color: red;
+      margin-top: 100px;
+    }
+
+    .right {
+      background-color: pink;
+    }
+
+    .box {
+      background-color: yellow;
+    } */
+
+    /* border-sizing是盒子的标准模型，往外扩，最终的宽高是需要加上border、padding和content，border-box内建模型，设置的就是盒子最终的大小 */
+
+    /* div {
+      display: inline-block;
+    }
+
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #000;
+      font-size: 0;
+      去除行内块元素垂直排布的间隙问题
+    }
+
+    .red {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .yellow {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+      margin-left: 100px;
+    }
+
+    .blue {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      margin-top: 100px;
+    }
+
+    .pink {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin-left: 100px;
+    } */
+
+    /* 父元素没有设置高度，因为用了浮动之后，父元素就没有高度，
+    可以加一个块，clear：both，就可以撑开父元素的高度 */
+    .box {
+      width: 500px;
+      background-color: purple;
+      /*标准流中的盒子，如果没有设置高度，那么高度由子元素撑开*/
+    }
+
+    .son {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #ccc;
+      background-color: red;
+      float: left;
+      /*浮动的影响：当一个没有设置高度的标准流父盒子中，所有的子盒子都浮动起来之后，父盒子会失去高度*/
+    }
+
+    .box2 {
+      width: 500px;
+      height: 500px;
+      background-color: skyblue;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <a href="#one">第一句</a>
+  <a href="#two">第二句</a>
+
+  <p id="one">
+    这是一个寂寞的天
+  </p>
+  <p id="two">
+    下着有些伤心的雨
+  </p> -->
+
+
+  <!-- 
+    属性选择器
+    <li type="box">1</li>
+  <li type="box1 one">2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li> -->
+
+  <!--伪元素选择器
+     <p>
+    这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨这是一个寂寞的天，下着有些伤心的雨
+  </p>
+  <div>
+
+  </div> -->
+
+  <!-- <div>
+
+  </div> -->
+
+  <!-- 垂直塌陷问题：
+  <div class='one'></div>
+  <div class='two'></div> -->
+
+  <!-- 包含塌陷问题：
+  <div class="father">
+    <div class="son"></div>
+  </div> -->
+
+  <!-- margin共享问题
+  <div class="left"></div>
+  <div class="right"></div>
+  <div class="box"></div> -->
+
+  <!-- <div class="box">
+    <div class="red"></div>
+    <div class="yellow"></div>
+    <div class="blue"></div>
+    <div class="pink"></div>
+  </div> -->
+
+
+  <div class="box">
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="clear"></div>
+    <!-- 添加一个额外的标签，并且设置clear属性，来撑开父盒子的高度  -->
+  </div>
+  <div class="box2"></div>
+</body>
+
+</html>

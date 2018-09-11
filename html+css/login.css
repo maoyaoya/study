@@ -1,0 +1,103 @@
+* {
+	margin:0;
+	padding: 0;
+}
+i,
+em
+ {
+	font-style: normal;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+input{
+  border:none;
+}
+body{
+  background:#ccc;
+}
+#login{
+  width: 401px;
+	height: 475px;
+  background-color: #fff;
+  margin:0 auto;
+  padding-left:40px;
+}
+.tel input,
+.psw input{
+  width:341px;
+  height:42px;
+  padding-left:10px;
+  margin-top:75px;
+  border:1px solid #ccc;
+}
+.psw input{
+  margin-top:40px;
+}
+.tools {
+  margin-top:40px;
+  font-size:14px;
+  line-height:14px;
+}
+.tools input,
+.tools i {
+  vertical-align: middle;
+}
+.tools i{
+   padding-left:5px;
+}
+.tools a{
+  margin-right:50px;
+  float:right;
+}
+div .submit{
+  margin-top:32px;
+  width:351px;
+  height:42px;
+  background: #000;
+  color:#fff;
+  text-align: center;
+}
+div .no-left{
+  color:#ccc;
+}
+div .no{
+  margin-top:20px;
+  margin-right: 50px;
+  float:right;
+  font-size:14px;
+}
+.other{ 
+  margin-top:60px;
+  height:60px;
+}
+.other a{
+ 
+  display:inline-block;
+  margin-right:40px;
+  width:60px;
+  height:60px;
+  background-image:url(images/login_icons.png);
+}
+.other a:nth-child(2){
+  background-position:-60px 0;
+}
+.other a:nth-child(3){
+  background-position:-120px 0;
+}
+.other a:nth-child(4){
+  background-position:-180px 0;
+}
+.other a:nth-child(1):hover{
+  background-position:0 -60px;
+}
+.other a:nth-child(2):hover{
+  background-position:-60px -60px;
+}
+.other a:nth-child(3):hover{
+  background-position:-120px -60px;
+}
+.other a:nth-child(4):hover{
+  background-position:-180px -60px;
+}
