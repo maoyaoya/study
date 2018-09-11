@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css" />
+    <script type="text/javascript" src="../assets/js/velocity.js"></script>
+    <title>js动画</title>
+</head>
+
+<body>
+    <h1>js动画</h1>
+    <hr>
+    <div id="app">
+        <transition name="tade" @before-enter='before' @enter="en" @after-enter="leave">
+            <p v-if="show">{{message}}</p>
+        </transition>
+
+        <button @click="hand"> 单击</button>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello Vue!',
+                show: true
+            },
+            methods: {
+                hand: function () {
+                    this.show = !this.show;
+                },
+                before: function (el) {
+                    el.style.opacity = 0;
+                },
+                en: function (el, done) {
+                    Velocity(el, { opacity: 1 }, {
+                        duration: 1000,
+                        complete: done
+                    })
+                },
+                leave: function (el) {
+                    console.log('动画结束');
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

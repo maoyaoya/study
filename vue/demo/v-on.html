@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-on</title>
+</head>
+
+<body>
+    <h1>v-on 实例</h1>
+    <hr>
+    <div id="app">
+        <p>本场比赛得分：{{counter}}</p>
+        <button v-on:click="add">加分</button>
+        <button v-on:click="reduce">减分</button>
+        <input type="text" v-on:keyup.13="onEnter" v-model="changeValue" />
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                changeValue: 1
+            },
+            methods: {
+                add: function () {
+                    return this.counter++;
+                },
+                reduce: function () {
+                    return this.counter--;
+                },
+                onEnter: function () {
+                    return this.counter = this.counter + parseInt(this.changeValue);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

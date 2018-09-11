@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>动态组件</title>
+</head>
+
+<body>
+    <h1>动态组件</h1>
+    <hr>
+    <div id="app">
+        <component :is="type"></component>
+        <button @click="handleClick">切换</button>
+    </div>
+    <script type="text/javascript">
+        Vue.component('child-one', {
+            template: '<div v-once>child-one</div>'
+        })
+        Vue.component('child-two', {
+            template: '<div v-once>child-two</div>'
+        })
+        var app = new Vue({
+            el: '#app',
+            data: {
+                type: 'child-one'
+            },
+            methods: {
+                handleClick: function () {
+                    this.type = this.type === 'child-one' ? 'child-two' : 'child-one';
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

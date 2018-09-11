@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css" />
+    <script type="text/javascript" src="../assets/js/velocity.js"></script>
+    <title>动画</title>
+    <style>
+        .tade-enter-active,
+        .tade-leave-active {
+            transition: opacity 3s
+        }
+
+        .tade-enter,
+        .tade-leave-to {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>动画</h1>
+    <hr>
+    <div id="app">
+        <transition name="tade" :duration="2000" appear enter-active-class="animated tada tade-enter-active" leave-active-class="animated  hinge tade-leave-active"
+            appear-active-class="animated tada">
+            <p v-if="show">{{message}}</p>
+        </transition>
+
+        <button @click="hand"> 单击</button>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello Vue!',
+                show: true
+            },
+            methods: {
+                hand: function () {
+                    this.show = !this.show;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

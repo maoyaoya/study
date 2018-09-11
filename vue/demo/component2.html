@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-for</title>
+</head>
+
+<body>
+    <h1>组件</h1>
+    <hr>
+    <div id="app">
+        <count :cou="0"></count>
+        <count :cou="1"></count>
+    </div>
+
+    <script type="text/javascript">
+        var count = {
+            props: ['cou'],
+            data: function () {
+                return {
+                    number: this.cou
+                }
+            },
+            template: '<div @click="handClick">{{number}}</div>',
+            methods: {
+                handClick: function () {
+                    this.number++
+                }
+            }
+        }
+
+        var app = new Vue({
+            el: '#app',
+            components: {
+                count: count
+            }
+        })
+    </script>
+</body>
+
+</html>
