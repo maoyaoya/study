@@ -1,0 +1,165 @@
+* {
+	margin:0;
+	padding: 0;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+	/*去除li标签中的小点*/
+}
+
+input {
+	border: 0 none;
+	outline:none;
+}
+
+img {
+	border: 0 none;
+	/*去除图片在低版本中的边框*/
+	vertical-align: middle;
+	/*设置图片与文字的对齐方式，中线对齐*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+	font-weight: normal;
+}
+
+
+i,
+em {
+	font-style: normal;
+}
+
+.w{
+  width:1192px;
+  margin:0 auto;
+}
+body{
+  background: #f6f6f6;
+  font:12px/100% '微软雅黑';
+}
+.header{
+  height:171px;
+}
+.header .top{
+  height:30px;
+  background-color: #e3e4e5;
+  border-bottom:1px solid  #dddddd;
+}
+.w{
+  position:relative;
+}
+.w .logo{
+  width:190px;
+  height:170px;
+  background-color:#fff;
+  background-image: url(images/logo.v2.png);
+  position:absolute;
+  top:-31px;
+}
+.w .search{
+  width:548px;
+  height:33px;
+  position:absolute;
+  left:300px;
+  top:25px;
+  border:1px solid red;
+}
+.search  input{
+  width:498px;
+  height:33px;
+}
+.search a.fadajing{
+  float:right;
+  width:50px;
+  height:33px;
+  background-color:red;
+  background-image: url(images/fangdajin.png);
+  background-repeat:no-repeat;
+  background-position: center;
+}
+.hot li a{
+  float:left;
+  margin-top:10px;
+  font-size:14px;
+  color:#999999;
+  padding-right:8px;
+}
+.hot li:first-child a{
+  color:red;
+}
+.hot li a:hover{
+  color:red;
+}
+.w .my{
+  width:188px;
+  height:33px;
+  line-height:33px;
+  border:1px solid #e3e4e5;
+  background:#fff;
+  position:absolute;
+  left:880px;
+  top:25px;
+  color:red;
+  text-align: center;
+}
+.w .my i{
+   position:absolute;
+   top:5px;
+   right:34px;
+   width:14px;
+   height:14px;
+   border-radius:50%;
+   color:#fff;
+   background-color:red;
+   line-height:14px;
+}
+.w .scan{
+  width:60px;
+  height:60px;
+  background:url(images/code.png);
+  position:absolute;
+  top:0;
+  right:10px;
+}
+.w .select{
+  position:absolute;
+  left:228px;
+  top:100px;
+  font-size:18px;
+}
+.w .select li{
+  float:left;
+  line-height: 42px;
+  margin-left:25px;
+}
+.w .select li a{
+  color:#6e5555;
+}
+.w .select li.line{
+  width: 1px;
+	height: 12px;
+	background-color: #e3e4e5;
+  margin-top: 16px;
+  margin-left:20px;
+}
+.w .poor{
+  position:absolute;
+  right:0px;
+  top:100px;
+  width:190px;
+  height:40px;
+  background-image:url(images/广告.png);
+}
