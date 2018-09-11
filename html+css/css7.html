@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 禁止文本域拖拽 
+    textarea {
+      width: 300px;
+      height: 100px;
+      防止拖拽
+      resize: none;
+    } */
+
+    /* 文字对齐
+    div {
+      background-color: red;
+      font-size: 50px;
+    }
+
+    img {
+      vertical-align: baseline; 
+     vertical-align: top; 
+      vertical-align: middle;
+    } */
+
+    /* 文字自动换行
+    div {
+      width: 100px;
+      border: 1px solid #ccc;
+      word-break: break-all;
+      强制换行
+      word-break: keep-all;
+    } */
+
+
+    /* 文字强制一行，以及文本溢出处理
+    div {
+      width: 100px;
+      border: 1px solid #ccc;
+      white-space: nowrap;
+      text-overflow: clip;   //直接剪裁掉
+      overflow: hidden;      //必须要和overflow一起使用
+      white-space: nowrap;   强制一行显示
+      text-overflow: ellipsis;  剪裁掉的部分用....显示
+    } */
+
+    /* 初级滑动门
+    .left,
+    .right {
+      width: 15px;
+      height: 33px;
+      float: left;
+    }
+
+    .left {
+      background-image: url(images/weixin.png);
+    }
+
+    .right {
+      background: url(images/weixin.png) right 0;
+    }
+
+    .content {
+      有内容的部分一定不能定宽
+      height: 33px;
+      line-height: 33px;
+      color: #fff;
+      float: left;
+      background: url(images/weixin.png) -15px 0;
+    } */
+
+    /* 高级滑动门
+    .left {
+      width: 15px;
+      height: 33px;
+      float: left;
+      background-image: url(images/weixin.png);
+    }
+
+    .right {
+      color: #fff;
+      padding-right: 15px;
+      float: left;
+      height: 33px;
+      line-height: 33px;
+      background: url(images/weixin.png) right 0;
+    } */
+
+    /* 我的一个
+    .main {
+      float: left;
+      height: 33px;
+      line-height: 33px;
+      background-image: url(images/weixin.png);
+      color: thistle;
+      padding: 0 15px;
+    } */
+
+    .left {
+      height: 33px;
+      float: left;
+      background-image: url(images/weixin.png);
+    }
+
+    .right {
+      color: #fff;
+      padding-left: 15px;
+      padding-right: 15px;
+      float: left;
+      height: 33px;
+      line-height: 33px;
+      background: url(images/weixin.png) right 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <textarea></textarea> -->
+
+  <!-- <div>
+    <img src="images/2.jpg">你看我帅吗
+  </div> -->
+
+  <!-- 文字自动换行
+  <div>
+    aaaaaa a a a a a a aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  </div> -->
+
+  <!-- 文字强制一行，以及文本溢出处理
+  <div>
+    这是一个寂寞的天，下着有些伤心的雨
+  </div> -->
+
+  <!-- 初级滑动门
+  <div class="left"></div>
+  <div class="content">我我我我</div>
+  <div class="right"></div> -->
+
+  <!-- 高级滑动门
+  <div class="left"></div>
+  <div class="right">是暗红色</div> -->
+
+  <!-- 我的一个
+  <div class="main">一个试试</div> -->
+
+  <div class="left">
+    <div class="right">两个试试</div>
+  </div>
+</body>
+
+</html>

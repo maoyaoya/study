@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>css6</title>
+  <style>
+    /* 固定定位，margin等元素都有效果，只认浏览器，跟父元素没有任何关系
+    不占有位置，不随浏览器滚动。固定定位是相对浏览器的可是区域而言。可以实现
+    模式转换
+    div {
+      width: 200px;
+      height: 200px;
+      background: red;
+      position: fixed;
+      margin-top: 100px;
+      left: 100px;
+    }
+
+    span {
+      width: 200px;
+      height: 50px;
+      background: blue;
+      position: fixed;
+    } */
+
+    /* 对联
+    div {
+      width: 55px;
+      font-size: 50px;
+      background: red;
+      position: fixed;
+    }
+
+    .left {
+      top: 100px;
+    }
+
+    .right {
+      top: 100px;
+      right: 0px;
+    } */
+
+    /* 三色阶梯
+    .red {
+      width: 50px;
+      height: 200px;
+      background-color: red;
+      position: fixed;
+      top: 200px;
+    }
+
+    .blue {
+      width: 50px;
+      height: 150px;
+      background-color: blue;
+      position: absolute;
+      top: 25px;
+      left: 50px;
+    }
+
+    .yellow {
+      width: 50px;
+      height: 100px;
+      background-color: yellow;
+      position:absolute;
+      top:25px;
+      left:50px;
+    } */
+
+    /* 相对定位，不能脱离标准流，不能模式转换，可以使用定位属性
+    定位参照它原来的位置。 */
+
+    /* 实现垂直居中
+    .father {
+      width: 300px;
+      height: 300px;
+      background: red;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background: pink;
+       margin: 0 auto;    只能用在标准流盒子的块级元素中
+      position: absolute;
+      left: 50%;
+      margin-left: -50px;
+      top: 50%;
+      margin-top: -50px;
+    } */
+
+    /* z-index定位，存在父子关系时，不论子元素的设置层级多低，永远都只会显示在父元素之上
+    .father {
+      width: 300px;
+      height: 300px;
+      background: red;
+      z-index: 100;
+    }
+
+    .son {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      z-index: -100;
+    } */
+
+    /* 快进键
+    .box {
+      position: relative;
+    }
+
+    .one {
+      width: 0px;
+      height: 0px;
+      border-width: 25px;
+      border-style: solid;
+      border-color: transparent transparent transparent purple;
+    }
+
+    .two {
+      width: 0px;
+      height: 0px;
+      border-width: 25px;
+      border-style: solid;
+      border-color: transparent transparent transparent purple;
+      position: absolute;
+      top: 0;
+      left: 25px;
+    } */
+
+    /* 元素的显示与隐藏
+    div {
+      width: 200px;
+      height: 200px;
+
+    }
+
+    .box1 {
+      background-color: red;
+       display: none; 
+      显示模式:消失，不占位置
+      visibility: hidden;
+       隐身，但位置仍然存在 
+
+    }
+
+    .box2 {
+      background-color: green;
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- 固定定位
+  <div class="red"></div>
+  <span></span>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p>
+  <p>这是一个美好的夜晚</p> -->
+
+  <!-- 对联
+  <div class="left">
+    春风十里
+  </div>
+  <div class="right">
+    不如有你
+  </div> -->
+
+  <!-- 三色阶梯
+  <div class="red">
+    <div class="blue">
+      <div class="yellow">
+
+      </div>
+    </div>
+  </div> -->
+
+  <!-- 垂直居中
+  <div class="father">
+    <div class="son"></div>
+  </div> -->
+
+  <!-- z-index
+  <div class="father">
+    <div class="son"></div>
+  </div> -->
+
+  <!-- 快进键
+  <div class="box">
+    <div class="one"></div>
+    <div class="two"></div>
+  </div> -->
+
+  <!-- 元素的显示与隐藏
+  <div class="box1"></div>
+  <div class="box2"></div> -->
+</body>
+
+</html>
