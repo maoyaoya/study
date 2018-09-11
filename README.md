@@ -15,9 +15,9 @@
 ###### js部分
  promise中包括promise应用场景，以及then()、all()、race()方法<br>
  dom目录下是一些深入学习的demo<br>
- [仿新浪博客，实现了大部分的动态效果](http://maoyaoya.github.io/study/js/sina)<br>
- [贪吃蛇游戏](http://maoyaoya.github.io/study/js/sina)<br>
- [电商网站放大镜效果](http://maoyaoya.github.io/study/js/放大镜)<br>
+ [仿新浪博客，实现了大部分的动态效果](http://maoyaoya.github.io/study/js/sina/bokelist)<br>
+ [贪吃蛇游戏](http://maoyaoya.github.io/study/js/snake)<br>
+ [电商网站放大镜效果](http://maoyaoya.github.io/study/js/放大镜/fangda)<br>
  [购物车实现，包括结算件数、价格，删除商品功能](http://maoyaoya.github.io/study/js/购物车)<br>
 ###### vue部分主要是一些基本方法以及API的使用
 [vue效果,没有太多的动画的效果](http://maoyaoya.github.io/study/vue)
