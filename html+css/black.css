@@ -1,0 +1,349 @@
+*{
+  margin:0;
+  padding:0;
+}
+li{
+  list-style: none;
+}
+input{
+  border:0 none;
+  outline: none;
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+img{
+  border:0;
+  vertical-align:middle;
+}
+i,
+em {
+	font-style: normal;
+}
+.w{
+  width:1200px;
+  margin:0 auto;
+}
+body{
+  background-color: #f6f6f6;
+  font:12px/100% '微软雅黑';
+}
+/* 导航栏 */
+.top{
+  height:30px;
+  line-height: 30px;
+  background-color: #ebebeb;
+}
+.adv .left{
+  float: left;
+}
+.adv .left i{
+  color:red;
+}
+.adv .right{
+  float: right;
+}
+.header{
+  height:80px;
+  background-color: #2e3340;
+}
+.content{
+  position: relative;
+}
+.header .logo{
+  width:269px;
+  height:45px;
+  background-image: url(images/logo.png);
+  position: absolute;
+  top:15px;
+}
+.header ul{
+  position: absolute;
+  top:30px;
+  left:330px;
+}
+.header li{
+  color:#cccccc;
+  line-height: 17px;
+  float:left;
+  font-size: 17px;
+  margin-right: 18px;
+}
+.search {
+  position: absolute;
+  top:27px;
+  right:160px;
+  width:180px;
+  height:28px;
+  border:1px solid #525867;
+  border-radius:15px;
+}
+.search input{
+  float:left;
+   width:125px;
+   height:28px;
+   padding-left: 15px;
+   background-color: #2e3340;
+   border-radius:15px;
+}
+.search .right{
+  float: left;
+  width:40px;
+  height:28px;
+  background: url(images/放大镜.png) no-repeat 8px 6px;
+}
+.login{
+  position: absolute;
+  top:34px;
+  right:0;
+}
+.login .l,
+.login .s{
+  float: right;
+  font-size:17px;
+  color:#ccc;
+}
+.login .l{
+  padding-right:20px;
+}
+/* 内容区 */
+.main{
+  margin-top:40px;
+  position: relative;
+}
+.main .right{
+  width:220px;
+  height:2203px;
+  background-color: #ffffff;
+  overflow: hidden;
+  float: left;
+}
+.main .right ul{
+   padding:0 12px;
+}
+.main .right li{ 
+  width:196px;
+ 
+}
+.main .right li:nth-child(even){
+  padding-bottom: 18px;
+  border-bottom:1px solid #ccc;
+} 
+.main .right .right-header{
+  background-color: #323846;
+  font-size:17px;
+  color:#fff;
+  width:208px;
+  height:54px;
+  padding-left:12px;
+  line-height: 54px;
+  padding-bottom: 0;
+}
+.main .right li:nth-child(odd){
+  color:#2196f3;
+  font-size:16px;
+  height: 64px;
+  line-height: 64px;
+}
+.main .right li:nth-child(even) a{
+  color:#323846;
+  font-size:15px;
+  line-height: 15px;
+  padding-right: 15px;
+  line-height: 25px;
+}
+/* 另外一侧 */
+.left{
+  width:960px;
+  overflow: hidden;
+  position: absolute;
+  left:240px;
+}
+.left .left-top{
+  width:960px;
+  height:242px;
+  background: url(images/实战项目.jpg) no-repeat;
+  background-size: 960px 242px;
+}
+.left .content{
+  margin-top:28px;
+  background-color: #fff;
+  width:960px;
+  height:1932px;
+  overflow: hidden;
+}
+.left .content li{
+  float: left;
+  height:50px;
+  line-height: 50px;
+  font-size:14px; 
+  padding:0 17px;
+  cursor: pointer;
+} 
+.left .content .desc ul{
+  overflow: hidden;
+}
+.left .content .desc li:nth-child(even){
+  border:1px solid #f6f6f6;
+  border-top:none;
+}
+.left .content .desc li:nth-child(3){
+  border-bottom: 1px solid #f6f6f6;
+}
+.left .content .desc li span{
+  padding-left: 10px;
+}
+.content .picture ul{
+  width:283px;
+  height:268px;
+  background-color:#f6f6f6;
+  margin-left:30px;
+  margin-top:29px;
+  position: relative;
+  display: inline-block;
+}
+.content .picture ul li:first-child{
+  width:283px;
+  height:186px;
+  background:url(images/智慧北京.jpg) no-repeat;
+}
+.content .picture ul li:nth-child(2){
+  height:17px;
+  font-size:17px;
+  line-height: 17px;
+  padding-top:18px;
+}
+.content .picture ul li:nth-child(3){
+  height:46px;
+  line-height: 46px;
+  font-size:12px;
+  color:#777777;
+}
+.content .picture ul li:nth-child(3) i{
+  position: absolute;
+  left:10px;
+  top:221px;
+}
+.content .picture ul li:nth-child(3) span{
+  position: absolute;
+  right:11px;
+  top:221px;
+}
+.content .picture ul:nth-child(2) li:first-child{
+  width:283px;
+  height:186px;
+  background:url(images/爬虫框架.jpg) no-repeat;
+  background-size: 283px 186px;
+}
+/* 底部 */
+.footer{
+  width:100%;
+  height:253px;
+  background-color: #2e3340;
+  position: absolute;
+  top:2393px;
+}
+
+.footer .help ul{
+   overflow: hidden;
+   float: left;
+   color:#b0bcd0;
+   padding-top:10px;
+}
+.footer .help ul li{
+  font-size:14px;
+  height:28px;
+  line-height: 28px;
+}
+.footer .help ul li:first-child{
+  color:#ffffff;
+  font-size:17px;
+  height:63px;
+  line-height: 63px;
+}
+.footer .help ul:nth-child(2),
+.footer .help ul:nth-child(3){
+  margin-left: 93px;
+}
+/* .footer .line{
+  width: 1px;
+  height: 195px;
+  background-color: #5a6789;
+  position: absolute;
+  left:600px;
+  top:30px;
+} */
+.footer .line{
+  width:418px;
+  height:195px;
+  margin-top:30px;
+  margin-left: 520px;
+  border-left: 1px solid #5a6789;
+  border-right: 1px solid #5a6789;
+  position: relative;
+}
+.footer .line .left{
+  width:120px;
+  height: 120px;
+  background-image: url(images/二维码1.jpg);
+  position: absolute;
+  left:56px;
+  top:49px;
+}
+.footer .line .right{
+  width:120px;
+  height: 120px;
+  background-image: url(images/二维码2.jpg);
+  position: absolute;
+  right:56px;
+  top:49px;
+}
+.footer .line  i{
+  position: absolute;
+  font-size: 16px;
+  line-height: 16px;
+  color:#ffffff;
+}
+.footer .line  i:first-child{
+  left:56px;
+}
+.footer .line  i:nth-child(2){
+  right:58px;
+}
+.footer .contact{
+   width:235px;
+   height:157px;
+   margin-left:994px;
+   margin-top: -175px;
+   position: relative;
+  }
+  .footer .contact .icons ul:first-child li{
+    float: left;
+    width:54px;
+    height:54px;
+    background-image: url(images/icon精灵图.png);
+  }
+  .footer .contact .icons ul:first-child li:first-child{
+    background-position: 90px -480px;
+    padding-right: 24px;
+
+  }
+  .footer .contact .icons ul:first-child  li:nth-child(2){
+    background-position: 0 -383px;
+    padding-right: 24px;
+  }
+  .footer .contact .icons ul:first-child  li:nth-child(3){
+    background-position: 90px -381px;
+  }
+  .footer .contact .methods ul{
+    padding-top:30px;
+    overflow: hidden;
+    float: left;
+  }
+  .footer .contact .methods ul li{
+    font-size: 12px;
+    height:24px;
+    line-height: 24px;
+    color:#b0bcd0;
+  }
