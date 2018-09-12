@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>作用域</title>
+</head>
+
+<body>
+  <div id="div1">
+    <p id="p1">1</p>
+    <p id="p2">2</p>
+    <p id="p3">2</p>
+  </div>
+  <div id="div2">
+    <p id="p4">2</p>
+    <p id="p5">2</p>
+    <p id="p6">2</p>
+  </div>
+  <script>
+    // function bindEvent(elem,type,seletor,fn){
+    //   if(fn==null){
+    //     fn=seletor;
+    //     seletor=null;
+    //   }
+    //   if(seletor){
+    //     var 
+    //   }
+    // }
+
+    var p1 = document.getElementById('p1');
+    p1.addEventListener('click', function (e) {
+      e.stopPropagation();
+      alert('确认');
+    })
+
+    var body = document.body;
+    body.addEventListener('click', function () {
+      alert('取消');
+    })
+
+    //  作用域问题
+    //  var a;
+    // for (var i = 0; i < 10; i++) {
+    //   (function (i) {
+    //     a = document.createElement('a');
+    //     a.innerHTML = i + '<br>';
+    //     a.addEventListener('click', function () {
+    //       alert(i);
+    //     })
+    //     document.body.appendChild(a);
+    //   })(i)
+    // }
+
+    // 闭包的应用
+    // function isfirstLoad() {
+    //   var list = [];
+    //   return function (id) {
+    //     if (list.indexOf(id) > -1) {
+    //       console.log(false);
+    //       return false;
+    //     } else {
+    //       list.push(id);
+    //       console.log(true);
+    //       return true;
+    //     }
+    //   }
+    // }
+
+    // var f1 = isfirstLoad();
+    // f1(10);               //true
+    // f1(10);               //false
+    // f1(20);               //true
+
+
+  </script>
+</body>
+
+</html>
