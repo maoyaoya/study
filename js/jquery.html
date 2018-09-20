@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+  <style>
+    * {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>信息查询</h1>
+  <label>请输入员工编号：</label>
+  <input type="text" id="keyword">
+  <button id="search">查询</button>
+  <p id="search-result"></p>
+  <h1>增加员工信息</h1>
+  <label>请输入员工编号：</label>
+  <input type="text" id="number"><br>
+  <label>请输入员工姓名：</label>
+  <input type="text" id="name"><br>
+  <label>请输入员工性别：</label>
+  <select id="sex">
+    <option value="male">男</option>
+    <option value="female">女</option>
+  </select><br>
+  <label>请输入员工职位：</label>
+  <input type="text" id="position"><br>
+  <button id="submit">提交</button>
+  <p id="submit-result"></p>
+
+
+  <script>
+    $(document).ready(function () {
+      $('#search').click = function () {
+        $.ajax({
+          type: 'GET',
+          url: 'serverjson.php?number=' + $('#keyword').val(),
+          dataType: 'json',
+          success: function (data) {
+            if (data.success) {
+              $('#search-result').html(data.msg);
+            } else {
+              $('#search-result').html('出现错误：' + data.msg);
+            }
+          },
+          error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+          },
+        })
+      }
+
+      $('#submit').click(function () {
+        $.ajax({
+          type: 'POST',
+          url: 'serverjson.php',
+          dataType: 'json',
+          data: {
+            name: $('#name').val(),
+            number: $('#number').val(),
+            sex: $('#sex').val(),
+            job: $('#position').val(),
+          },
+          success: function () {
+            if (data.success) {
+              $('#submit-result').html(data.msg);
+            } else {
+              $('#submit-result').html('出现错误：' + data.msg);
+            }
+          },
+          error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+          }
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>
