@@ -1,4 +1,5 @@
 #### 平时学习时候写的小demo，记录一下，会持续更新~
+
 ###### html+css部分
  一部分效果没有显示，css2中是一些input框新增属性<br>
  css3中包含块级元素和行内元素的区别，以及div使用过程中的垂直塌陷、包含塌陷以及解决方法以及浮动清除<br>
@@ -12,6 +13,7 @@
 [仿新浪](http://maoyaoya.github.io/study/html+css/xinlang)<br>
 [某视频教学网站](http://maoyaoya.github.io/study/html+css/xuecheng)<br>
 [知乎登录页面](http://maoyaoya.github.io/study/html+css/zhihu)<br>
+
 ###### js部分
  promise中包括promise应用场景，以及then()、all()、race()方法<br>
  dom目录下是一些深入学习的demo<br>
